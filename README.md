@@ -20,8 +20,10 @@ The steps below will allow you to generate an environment that should allow you 
     $ pip install open3d
     $ pip install torch
     $ pip install torchvision
+    $ pip install tensorboardX
+    $ pip install tensorboard
     
-## 5) Clone PSMNet Repo and get pre-trained model
+## 5) Clone Argoverse
     $ git clone git@github.com:curtisjm17/argoverse-api.git
 
 ## 6) Install Argoverse
@@ -43,7 +45,10 @@ The steps below will allow you to generate an environment that should allow you 
     $ tar -xf disparity_maps_v1.1.tar
     $ gunzip rectified_stereo_images_v1.1.tar.gz
     $ tar -xf rectified_stereo_images_v1.1.tar
-
+## 11) Clone mobilestereonet:
+    This should be cloned to the same directory that all other clones have occured in.
+        
+    $ git clone git@github.com:taylormaurer4323/mobilestereonet.git
 # Results
 Results generated from these models can be found here:\
 https://drive.google.com/drive/folders/1qzRZFK35v3Jdq8aCoflg6QV_ajw-339O?usp=sharing
