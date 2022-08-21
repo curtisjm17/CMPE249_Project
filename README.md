@@ -8,6 +8,7 @@ The steps below will allow you to generate an environment that should allow you 
 
 ## 2) Clone Project Git Repo
     $ git clone git@github.com:curtisjm17/CMPE249_Project.git
+    $ cd CMPE249_Project
 
 ## 3) Create and activate Conda environment
     $ conda create --name argoStereo python=3.8 -y
@@ -19,22 +20,25 @@ The steps below will allow you to generate an environment that should allow you 
     $ pip install open3d
     $ pip install torch
     $ pip install torchvision
+    
+## 5) Clone PSMNet Repo and get pre-trained model
+    $ git clone git@github.com:curtisjm17/argoverse-api.git
 
-## 5) Install Argoverse
+## 6) Install Argoverse
     $ pip install -e ./argoverse-api/
 
-## 6) Clone PSMNet Repo and get pre-trained model
+## 7) Clone PSMNet Repo and get pre-trained model
     $ git clone git@github.com:JiaRenChang/PSMNet.git
     $ wget https://drive.google.com/u/0/uc?id=1pHWjmhKMG4ffCrpcsp_MTXMJXhgl3kF9 -O ./PSMNet/pretrained_model_KITTI2015.tar 
 
-## 7) Create Argoverse data directory structure
+## 8) Create Argoverse data directory structure
     $ mkdir <directory to store repos>/argoverse_stereo_v1.1
 
-## 8) Download Argo Stereo Dataset from following location
+## 9) Download Argo Stereo Dataset from following location
     $ wget https://s3.amazonaws.com/argoai-argoverse/rectified_stereo_images_v1.1.tar.gz -O ./argoverse_stereo_v1.1/rectified_stereo_images_v1.1.tar.gz
     $ wget https://s3.amazonaws.com/argoai-argoverse/disparity_maps_v1.1.tar.gz -O ./argoverse_stereo_v1.1/disparity_maps_v1.1.tar.gz 
 
-## 9) Untar data
+## 10) Untar data
     $ gunzip disparity_maps_v1.1.tar.gz
     $ tar -xf disparity_maps_v1.1.tar
     $ gunzip rectified_stereo_images_v1.1.tar.gz
